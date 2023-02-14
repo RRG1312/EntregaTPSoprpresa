@@ -1,0 +1,27 @@
+@startuml
+
+Interface Dialogo{
+  crearDialogo()
+}
+
+Class DialogoMac implements Dialogo{
+  crearDialogo(escribir("Dialogo Mac"))
+}
+
+Class DialogoWindows implements Dialogo{
+  crearDialogo(escribir("Dialog Windows"))
+}
+
+Interface FabricaDialogo{
+  return dialogo
+}
+
+Class FabricaDialogoMac implements FabricaDialogo{
+  return DialogoMac
+}
+
+Class FabricaDialogoWindows implements FabricaDialogo{
+  return dialogoWindows
+}
+
+@enduml
